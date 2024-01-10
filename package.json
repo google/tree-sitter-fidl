@@ -1,0 +1,29 @@
+{
+  "name": "tree-sitter-fidl",
+  "version": "1.0.0",
+  "description": "tree-sitter parser for fidl",
+  "main": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "keywords": [
+    "tree-sitter"
+  ],
+  "author": "chaopeng@google.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "0.20.8"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.fidl",
+      "file-types": [
+        "fidl"
+      ]
+    }
+  ]
+}
