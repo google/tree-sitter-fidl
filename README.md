@@ -55,7 +55,7 @@ usually `$XDG_CONFIG_HOME/nvim` is one of the runtime-dir.
 
 ## TODOs
 
-- [ ] setup girhub actions to pull fuchsia repo and verify sdk every half year
+- [ ] setup github actions to pull fuchsia repo and verify sdk every half year
 - [ ] add to nvim-treesitter
 - [ ] add instructions for emacs usage
 
