@@ -25,10 +25,12 @@
   "using"
 ] @keyword
 
-(primitives_type) @type
-(builtin_complex_type) @type
+(primitives_type) @type.builtin
 
-(const_declaration (identifier) @constant )
+(builtin_complex_type) @type.builtin
+
+(const_declaration
+  (identifier) @constant)
 
 [
   "="
@@ -37,8 +39,9 @@
   "->"
 ] @operator
 
-(attribute (identifier) @attribute)
-(attribute ("@") @attribute)
+(attribute
+  "@" @attribute
+  (identifier) @attribute)
 
 (string_literal) @string
 
@@ -47,7 +50,7 @@
 [
   (true)
   (false)
-] @constant.builtin
+] @boolean
 
 (comment) @comment
 
