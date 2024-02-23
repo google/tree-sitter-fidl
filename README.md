@@ -48,11 +48,7 @@ parser_config.fidl = {
   install_info = {
     url = "path/to/tree-sitter-fidl",
     files = { "src/parser.c" },
-    -- generate from grammar is required because we did not upload generated
-    -- files.
-    requires_generate_from_grammar = true,
   },
-  filetype = "fidl",
 }
 ```
 
