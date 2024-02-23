@@ -28,7 +28,17 @@ Fuchsia developers using tree-sitter supported editors (NeoVim / Emacs).
 
 ### NeoVim Treesitter
 
-TODO: add to [nvim-treesitter][] register.
+*Require NeoVim version > 0.9* to use [nvim-treesitter][] plugin.
+
+`:TSInstall fidl` to install in NeoVim.
+
+You may need to install `tree-sitter` and `nodejs`.
+
+Add filetype mapping, you may add this to `<nvim-config>/lua/options.lua`:
+
+```lua
+vim.filetype.add({ extension = { fidl = "fidl" } })
+```
 
 #### local installation
 
@@ -56,7 +66,6 @@ usually `$XDG_CONFIG_HOME/nvim` is one of the runtime-dir.
 ## TODOs
 
 - [ ] setup github actions to pull fuchsia repo and verify sdk every half year
-- [ ] add to nvim-treesitter
 - [ ] add instructions for emacs usage
 
 
