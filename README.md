@@ -32,8 +32,6 @@ Fuchsia developers using tree-sitter supported editors (NeoVim / Emacs).
 
 `:TSInstall fidl` to install in NeoVim.
 
-You may need to install `tree-sitter` and `nodejs`.
-
 Add filetype mapping, you may add this to `<nvim-config>/lua/options.lua`:
 
 ```lua
