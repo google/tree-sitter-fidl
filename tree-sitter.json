@@ -1,0 +1,37 @@
+{
+  "grammars": [
+    {
+      "name": "fidl",
+      "camelcase": "Fidl",
+      "scope": "source.fidl",
+      "path": ".",
+      "file-types": [
+        "fidl"
+      ],
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "license": "Apache-2.0",
+    "description": "tree-sitter parser for fidl",
+    "authors": [
+      {
+        "name": "chaopeng",
+        "email": "chaopeng@google.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/google/tree-sitter-fidl"
+    }
+  },
+  "bindings": {
+    "c": false,
+    "go": false,
+    "node": true,
+    "python": false,
+    "rust": true,
+    "swift": false
+  }
+}

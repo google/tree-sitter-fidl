@@ -1,12 +1,15 @@
 [package]
 name = "tree-sitter-fidl"
-description = "fidl grammar for the tree-sitter parsing library"
-version = "0.0.1"
-keywords = ["incremental", "parsing", "fidl"]
-categories = ["parsing", "text-editors"]
-repository = "https://github.com/google/tree-sitter-fidl"
-edition = "2018"
+description = "tree-sitter parser for fidl"
+version = "1.0.0"
+authors = ["chaopeng <chaopeng@google.com>"]
 license = "Apache-2.0"
+readme = "README.md"
+keywords = ["incremental", "parsing", "tree-sitter", "fidl"]
+categories = ["parser-implementations", "parsing", "text-editors"]
+repository = "https://github.com/google/tree-sitter-fidl"
+edition = "2021"
+autoexamples = false
 
 build = "bindings/rust/build.rs"
 include = [
@@ -14,13 +17,18 @@ include = [
   "grammar.js",
   "queries/*",
   "src/*",
+  "tree-sitter.json",
+  "/LICENSE",
 ]
 
 [lib]
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter = "~0.20.10"
+tree-sitter-language = "0.1"
 
 [build-dependencies]
-cc = "1.0"
+cc = "1.4"
+
+[dev-dependencies]
+tree-sitter = "0.27.0"

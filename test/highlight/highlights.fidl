@@ -1,0 +1,42 @@
+// A sample FIDL file for highlight testing
+// ^ @comment
+
+@available(added=1)
+// ^ @attribute
+library fuchsia.example;
+// ^ @keyword
+
+using zx as zx_types;
+// ^ @keyword
+//       ^ @keyword
+
+const MAX_SIZE uint32 = 42;
+// ^ @keyword
+//    ^ @constant
+//             ^ @type.builtin
+//                    ^ @operator
+//                      ^ @number
+
+const ENABLED bool = true;
+//            ^ @type.builtin
+//                   ^ @boolean
+
+const GREETING string = "hello";
+//             ^ @type.builtin
+//                      ^ @string
+
+type MyStruct = strict struct {
+// ^ @keyword
+//              ^ @keyword
+//                     ^ @keyword
+//                            ^ @punctuation.bracket
+    count uint32;
+};
+
+open protocol Echo {
+// ^ @keyword
+//   ^ @keyword
+    flexible Ping() -> ();
+    // ^ @keyword
+    //              ^ @operator
+};

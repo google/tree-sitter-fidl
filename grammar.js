@@ -1,3 +1,6 @@
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 /**
  * Copyright 2024 Google LLC
  *
@@ -21,6 +24,8 @@ const
 
 module.exports = grammar({
   name: 'fidl',
+
+  word: $ => $.identifier,
 
   extras: $ => [$.comment, /\s/],
 
