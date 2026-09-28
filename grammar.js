@@ -96,7 +96,11 @@ module.exports = grammar({
       ),
 
     // declaration-modifiers = "flexible" | "strict" | "resource" ; [NOTE 2]
-    declaration_modifiers: (_) => choice("flexible", "strict", "resource"),
+    declaration_modifiers: ($) =>
+      seq(
+        choice("flexible", "strict", "resource"),
+        optional(seq("(", choice($.constant, $.attribute_args), ")")),
+      ),
 
     // layout-subtype = ":" , type-constructor ; [NOTE 3]
     layout_subtype: ($) => seq(":", $.type_constructor),
@@ -147,7 +151,7 @@ module.exports = grammar({
     protocol_declaration: ($) =>
       seq(
         optional($.attribute_list),
-        optional($.protocol_attribute),
+        repeat($.protocol_attribute),
         "protocol",
         $.identifier,
         "{",
@@ -155,7 +159,11 @@ module.exports = grammar({
         "}",
       ),
 
-    protocol_attribute: (_) => choice("open", "closed", "ajar"),
+    protocol_attribute: ($) =>
+      seq(
+        choice("open", "closed", "ajar"),
+        optional(seq("(", choice($.constant, $.attribute_args), ")")),
+      ),
 
     // protocol-member = protocol-method | protocol-event | protocol-compose
     protocol_member: ($) => choice($.protocol_method, $.protocol_event, $.protocol_compose),
@@ -167,7 +175,7 @@ module.exports = grammar({
     protocol_method: ($) =>
       seq(
         optional($.attribute_list),
-        optional($.declaration_modifiers),
+        repeat($.declaration_modifiers),
         $.identifier,
         $.parameter_list,
         optional(seq("->", $.parameter_list, optional(seq("error", $.type_constructor)))),
@@ -179,7 +187,7 @@ module.exports = grammar({
     protocol_event: ($) =>
       seq(
         optional($.attribute_list),
-        optional($.declaration_modifiers),
+        repeat($.declaration_modifiers),
         "->",
         $.identifier,
         $.parameter_list,

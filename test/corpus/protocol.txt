@@ -218,3 +218,55 @@ open protocol Protocol {
               (identifier)))
           (compound_identifier
             (identifier)))))))
+
+================================================================================
+with modifier availability
+================================================================================
+
+library this_is_library;
+
+closed(removed=18) open(added=18) protocol Protocol {
+  strict(removed=18) flexible(added=18) EnableSecureMode();
+};
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (library
+    (compound_identifier
+      (identifier)))
+  (declaration
+    (protocol_declaration
+      (protocol_attribute
+        (attribute_args
+          (attribute_arg
+            (identifier)
+            (constant
+              (literal
+                (numeric_literal))))))
+      (protocol_attribute
+        (attribute_args
+          (attribute_arg
+            (identifier)
+            (constant
+              (literal
+                (numeric_literal))))))
+      (identifier)
+      (protocol_member
+        (protocol_method
+          (declaration_modifiers
+            (attribute_args
+              (attribute_arg
+                (identifier)
+                (constant
+                  (literal
+                    (numeric_literal))))))
+          (declaration_modifiers
+            (attribute_args
+              (attribute_arg
+                (identifier)
+                (constant
+                  (literal
+                    (numeric_literal))))))
+          (identifier)
+          (parameter_list))))))
