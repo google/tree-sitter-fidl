@@ -66,24 +66,23 @@ usually `$XDG_CONFIG_HOME/nvim` is one of the runtime-dir.
 
 ### Helix
 
-*Require Helix version >= 
-[358ac6bc1f512ca7303856dc904d4b4cdc1fe718](https://github.com/helix-editor/helix/commit/358ac6bc1f512ca7303856dc904d4b4cdc1fe718)*
-(will update this version when the commit landed to release)
-
 Tree Sitter FIDL works out of box like other language support on helix.
 
 ```
 hx --grammar fetch fidl
 hx --grammar build fidl
-mkdir -p ~/.config/helix/runtime/queries/
-cp -r <path to helix source>/runtime/queries/fidl ~/.config/helix/runtime/queries
 ```
 
 ### Emacs
 
-Charles Celerier has a WIP cl for Emacs usage https://fuchsia-review.git.corp.google.com/c/fuchsia/+/996186.
+Charles Celerier has a WIP cl for Emacs usage https://fxrev.dev/996186.
 
 It does not have instructions yet, but you may able to figure out how it works.
+
+## Maintenance
+
+- **NeoVim (`nvim-treesitter`)**: Revisions are updated automatically in [`lua/nvim-treesitter/parsers.lua`](https://github.com/nvim-treesitter/nvim-treesitter/blob/main/lua/nvim-treesitter/parsers.lua).
+- **Helix (`hx`)**: Requires manually updating the grammar revision after this repository is updated (see [helix-editor/helix#16319](https://github.com/helix-editor/helix/pull/16319)).
 
 ## License
 
