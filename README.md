@@ -1,5 +1,8 @@
 # Tree Sitter FIDL
 
+[![Build/test](https://github.com/google/tree-sitter-fidl/actions/workflows/ci.yml/badge.svg)](https://github.com/google/tree-sitter-fidl/actions/workflows/ci.yml)
+[![Test Fuchsia FIDL](https://github.com/google/tree-sitter-fidl/actions/workflows/fuchsia-fidl.yml/badge.svg)](https://github.com/google/tree-sitter-fidl/actions/workflows/fuchsia-fidl.yml)
+
 Disclaimer: _This is not an officially supported Google product._
 
 This is [tree-sitter][] parser for [FIDL files][] (Fuchsia Interface Definition Language).
