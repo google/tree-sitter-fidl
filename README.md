@@ -3,7 +3,8 @@
 [![Build/test](https://github.com/google/tree-sitter-fidl/actions/workflows/ci.yml/badge.svg)](https://github.com/google/tree-sitter-fidl/actions/workflows/ci.yml)
 [![Test Fuchsia FIDL](https://github.com/google/tree-sitter-fidl/actions/workflows/fuchsia-fidl.yml/badge.svg)](https://github.com/google/tree-sitter-fidl/actions/workflows/fuchsia-fidl.yml)
 
-Disclaimer: _This is not an officially supported Google product._
+> [!WARNING]
+> Disclaimer: This is not an officially supported Google product.
 
 This is [tree-sitter][] parser for [FIDL files][] (Fuchsia Interface Definition Language).
 
@@ -83,11 +84,6 @@ cp -r <path to helix source>/runtime/queries/fidl ~/.config/helix/runtime/querie
 Charles Celerier has a WIP cl for Emacs usage https://fuchsia-review.git.corp.google.com/c/fuchsia/+/996186.
 
 It does not have instructions yet, but you may able to figure out how it works.
-
-## TODOs
-
-- [ ] setup github actions to pull fuchsia repo and verify sdk every half year
-- [ ] add instructions for emacs usage
 
 ## License
 
